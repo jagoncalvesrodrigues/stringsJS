@@ -93,8 +93,10 @@ console.log(countLetters('juan','juan','juan'));
 // Por ejemplo, "hola mundo" se convertiría en "Hola Mundo".
 
 function titlePhrase(phrase){
-    return 
+    return phrase.toUpperCase().charAt(0)+phrase.slice(1,phrase.indexOf(' '))+' '+(phrase.toUpperCase().charAt(phrase.indexOf(' ')+1)+phrase.slice(phrase.indexOf(' ')+2));
 }  
+
+console.log(titlePhrase('hola mundo'));
 
 // - Crea una función que reciba un nombre y un apellido y devuelva las iniciales en mayúsculas. Por ejemplo, si recibe "Carlos Pérez", deberá devolver "C.P.".
 
