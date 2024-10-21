@@ -69,6 +69,22 @@ console.log(userName('Juan','Goncalves'));
 // - Crea una función que reciba 2 verbos en infinitivo. La función debe imprimir a qué conjugación pertenecen. Por ejemplo, si la función recibe "andar" y "correr"
 //  debe imprimir "El verbo andar es de la primera conjugación y el verbo correr de la segunda conjugación".
 
+function conjugation (verb){
+    const finalLetter= verb.substring(verb.length-2);
+    if(finalLetter==='ar'){
+        return 'primera';
+    }else if(finalLetter==='er'){
+        return 'segunda';
+    }else{
+        return 'tercera';
+    }
+}
+function verbs (verb1,verb2){
+    return (`El verbo ${verb1} es de la ${conjugation(verb1)} conjugacion y el verbo ${verb2} es de la conjugacion ${conjugation(verb2)} conjugacion`)
+}
+
+console.log(verbs('andar','correr'))
+
 // - Crea una función que reciba una palabra de 4 letras y devuelva la palabra invertida. Por ejemplo, si recibe "casa", deberá devolver "asac".
 function letters(word){
     return (word.charAt(3)+word.charAt(2)+word.charAt(1)+word.charAt(0))
