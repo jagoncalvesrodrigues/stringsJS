@@ -69,7 +69,6 @@ console.log(userName('Juan','Goncalves'));
 // - Crea una función que reciba 2 verbos en infinitivo. La función debe imprimir a qué conjugación pertenecen. Por ejemplo, si la función recibe "andar" y "correr"
 //  debe imprimir "El verbo andar es de la primera conjugación y el verbo correr de la segunda conjugación".
 
-
 // - Crea una función que reciba una palabra de 4 letras y devuelva la palabra invertida. Por ejemplo, si recibe "casa", deberá devolver "asac".
 function letters(word){
     return (word.charAt(3)+word.charAt(2)+word.charAt(1)+word.charAt(0))
@@ -97,6 +96,70 @@ function titlePhrase(phrase){
     return 
 }  
 
+// - Crea una función que reciba un nombre y un apellido y devuelva las iniciales en mayúsculas. Por ejemplo, si recibe "Carlos Pérez", deberá devolver "C.P.".
 
+function initials(name){
+    return (name.charAt(0)+'.'+name.charAt(name.indexOf(" ")+1)+'.');
+}
+
+// - Crea una función que reciba 3 palabras y calcule el promedio de la longitud de esas palabras. Por ejemplo, si recibe "hola", "adiós" y "mundo", el promedio sería 4.67.
+
+function amountLetters2(word){
+    return (word.length);
+}
+function countLetters2(word1,word2,word3){
+    return ((amountLetters2(word1)+amountLetters2(word2)+amountLetters2(word3))/3);
+}
+
+// - Crea una función que reciba un número de teléfono de 10 dígitos (como "1234567890") y lo formatee de la siguiente manera: "(123) 456-7890".
+
+function phoneFormat(phone){
+    return phone.length>10 ? 'numero erroneo': ('('+phone.substring(0,3)+') '+phone.substring(3,6)+'-'+phone.substring(6));
+}
+// - Crea una función que reciba una palabra de 4 letras y la devuelva en orden inverso, duplicando cada letra. Por ejemplo, si recibe "hola", devolvería "aalloohh".
+
+function letters2(word){
+    return ((word.charAt(3)+word.charAt(3))+(word.charAt(2)+word.charAt(2))+(word.charAt(1)+word.charAt(1))+(word.charAt(0)+word.charAt(0)))
+}
+function invertedWord2(word){
+    return word.length===4?letters2(word):'La palabra tiene mas de 4 letras amigo';
+}
+
+// - Crea una función que reciba un número de dos dígitos y devuelva true si ambos dígitos son pares. Por ejemplo, si recibe 24, devolvería true, pero si recibe 23, devolvería false.
+function checkup(number) {
+    const tens = Math.floor(number / 10); 
+    const units = number % 10; 
+    return (tens % 2 === 0 && units % 2 === 0);
+}
+
+function pairNumber(number){
+    return number.toString().length==2?checkup(number):'el numero es mayor a 2 digitos'
+}
+console.log(pairNumber(24));
+
+// - Crea una función que reciba dos palabras de 4 letras y verifique si contienen las mismas letras en diferente orden, por ejemplo "amor" y "mora"
+
+function comprobationLetters(word1,word2){
+    return (word2.includes(word1.charAt(0)) && 
+            word2.includes(word1.charAt(1)) &&
+            word2.includes(word1.charAt(2)) && 
+            word2.includes(word1.charAt(3))
+        )
+}
+
+function sameLetters(word1,word2){
+    return word1.length===4 && word2.length===4?comprobationLetters(word1,word2):'las palabras no tienen 4 letras';
+}
+// - Crea una función que reciba un string y un número n, y devuelva los primeros n caracteres del string (puedes usar el método slice).
+
+function sliceWord(word,number){
+    return word.slice(0,number);
+}
+// - Crea una función que reciba una frase y una palabra, y te diga si la palabra está o no en la frase
+
+function specificWord(word,phrase){
+    return phrase.toLowerCase().includes(word.toLowerCase());
+}
+console.log(specificWord('juan','Buenas mi nombre es Juan'));
 
 
