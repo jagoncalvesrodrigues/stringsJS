@@ -132,8 +132,10 @@ function countLetters2(word1,word2,word3){
 // - Crea una función que reciba un número de teléfono de 10 dígitos (como "1234567890") y lo formatee de la siguiente manera: "(123) 456-7890".
 
 function phoneFormat(phone){
-    return phone.length>10 ? 'numero erroneo': ('('+phone.substring(0,3)+') '+phone.substring(3,6)+'-'+phone.substring(6));
+    return phone.length>10 ? 'numero erroneo': ('('+String(phone).substring(0,3)+') '+String(phone).substring(3,6)+'-'+String(phone).substring(6));
 }
+
+console.log(phoneFormat(1234567890));
 // - Crea una función que reciba una palabra de 4 letras y la devuelva en orden inverso, duplicando cada letra. Por ejemplo, si recibe "hola", devolvería "aalloohh".
 
 function letters2(word){
