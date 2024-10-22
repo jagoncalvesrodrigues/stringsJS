@@ -83,7 +83,7 @@ function verbs (verb1,verb2){
     return (`El verbo ${verb1} es de la ${conjugation(verb1)} conjugacion y el verbo ${verb2} es de la conjugacion ${conjugation(verb2)} conjugacion`)
 }
 
-console.log(verbs('andar','correr'))
+console.log(verbs('andar','correr'));
 
 // - Crea una función que reciba una palabra de 4 letras y devuelva la palabra invertida. Por ejemplo, si recibe "casa", deberá devolver "asac".
 function letters(word){
